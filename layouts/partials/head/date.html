@@ -1,0 +1,10 @@
+{{ with .Lastmod }}
+<meta property="og:updated_time" content={{ .Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
+{{ end }}
+{{/* Sitemap & RSS Feed Tags */}}
+<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ .Site.BaseURL }}sitemap.xml" />
+
+{{ with .OutputFormats.Get "RSS" }}
+<link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+<link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+{{ end }}

@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Courgette';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Courgette-Regular.ttf');
+}
+
+.open {
+  --iny: 110%;
+  --outy: 100%;
+}
+.open .open {
+  --iny: 0;
+  --outy: 0;
+  --inx: 110%;
+  --outx: 100%;
+}
+
+.swiper-slide-active h3,
+.swiper-slide-active img {
+  --iny: -2em;
+}
+.swiper-slide-active p a {
+  --iny: 2em;
+}
+.opener:hover > .open,
+.swiper-slide-active h3,
+.swiper-slide-active img,
+.swiper-slide-active p a {
+  animation: slide-in 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s both;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translate(var(--inx, 0), var(--iny, 0));
+    opacity: 0;
+  }
+  to {
+    transform: translate(var(--outx, 0), var(--outy, 0));
+    opacity: 1;
+    visibility: visible;
+  }
+}

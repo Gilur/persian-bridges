@@ -1,0 +1,45 @@
+baseURL: https://persian-bridges.com/
+params:
+  author: M. Inam
+  whatsapp: https://api.whatsapp.com/send?phone=31638304249&text=persian-Bridges&source=&data=
+  insta: https://www.instagram.com/persian_bridges/  
+  fb: https://www.facebook.com/persianbridges/ 
+  email: info@persian-bridges.com
+  address:
+  tel: 
+
+title: Persian Bridges
+copyright: Copyright Persian Bridges KVK 71723684 Telefoonnummer 0031-638304249  0098-9120085257
+ 
+# build and other other setup
+build:
+  writeStats: true
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    parser:
+      attribute:
+        block: true
+
+sectionPagesMenu: main
+
+security:
+  enableInlineShortcodes: false
+  exec:
+    allow:
+      - ^dart-sass-embedded$
+      - ^go$
+      - ^npx$
+      - ^babel$
+      - ^postcss$
+    osEnv:
+      - (?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$
+  funcs:
+    getenv:
+      - ^HUGO_
+  http:
+    methods:
+      - (?i)GET|POST
+    urls:
+      - .*

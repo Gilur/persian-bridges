@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang='{{ .Site.LanguageCode }}' style="scroll-behavior: smooth;">
+{{ partial "head.html" . -}}
+
+<body class="flex flex-col min-h-screen">
+  {{- partial "header.html" . -}}
+  <main class="flex-1">
+    {{ if and (isset .Params "hero") (not .IsHome) }}
+    {{ partial "components/hero.html" . }}
+    {{ end }}
+    {{- block "main" . }}{{- end }}
+  </main>
+  {{- partial "footer.html" . -}}
+  {{- partial "mainJs.html" . -}}
+</body>
+
+</html>

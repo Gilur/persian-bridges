@@ -1,0 +1,48 @@
+<header class="shadow-lg text-lg text-primary font-courgette">
+  <div class="container py-2 flex items-center justify-between">
+    <div>
+      <a href="{{ .Site.Home.Permalink}}">
+        <img src="{{ (resources.GetMatch `/images/PersionBridges-1.png`).Permalink }}" alt="logo" class="w-20">
+      </a>
+    </div>
+    <div class="flex space-x-2">
+      <nav>
+        <ul class="hidden lg:flex space-x-8">
+          {{ range .Params.menu }}
+          <li><a href="{{ .url }}" class="">{{ .name }}</a></li>
+          {{ end }}
+        </ul>
+        {{/* Mobile menu */}}
+        <ul id="mobile-nav"
+          class="lg:hidden block fixed top-0 left-0 right-0 bottom-0 z-40 pt-16 bg-white overflow-y-auto transform translate-x-full transition duration-500">
+          {{ range .Params.menu }}
+          <li><a href="{{ .url }}" class="block p-4">{{ .name }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+
+
+      <button type="menu" class="lg:hidden relative z-50 py-4"
+        onclick="document.getElementById('mobile-nav').classList.toggle('transform');this.querySelectorAll('path').forEach(e => e.classList.toggle('hidden'))">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+          <path stroke-linecap="round" class="hidden" stroke-linejoin="round" stroke-width="2"
+            d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <button class="relative pl-8" onclick="this.querySelector('.absolute').classList.toggle('hidden')">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802" />
+        </svg>
+        <div class="p-4 absolute top-6 shadow-md rounded right-0 w-32 flex flex-col bg-white hidden">
+          {{ range .Params.lang }}
+          <a href="{{ .url }}" class="py-2">{{ .name }}</a>
+          {{ end }}
+        </div>
+      </button>
+    </div>
+  </div>
+</header>

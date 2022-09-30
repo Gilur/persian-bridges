@@ -1,0 +1,29 @@
+<div class="lg:flex space-y-8 lg:space-y-0">
+  <div class="w-full">
+    <img src="{{(index (resources.Match `images/Email_SVG.svg`) 0).Permalink}}" alt="graphic" aria-hidden="true"
+      class="w-56 mx-auto" loading="lazy">
+  </div>
+  <div class="lg:max-w-screen-sm space-y-8 w-full">
+    <div class="space-y-4">
+      <h3 class="text-2xl">Would you like to receive the Dark Labs newsletter?</h3>
+      <p class="leading-relaxed">
+        We will send relevant information about our services and how-to's on increasing your cyber security
+      </p>
+    </div>
+    <div>
+      <form name="subscription" netlify-honeypot="bot-field" method="post" class="space-y-4" netlify
+        action="/form-success">
+        <label for="email" class="leading-loose">Email Address:</label>
+        <div class="rounded-full bg-white relative flex overflow-hidden focus-within:ring-4">
+          <input type="email" name="email" required autocomplete="off"
+            class="py-2 md:py-4 px-4 w-full focus:outline-none">
+          <button type="submit"
+            class="bg-primary transition duration-500 hover:bg-blue-500 px-4 md:px-8 rounded-full text-xs text-white">
+            {{- upper "subscribe" -}}
+          </button>
+        </div>
+        <small>You agree to receive relevant news letters.</small>
+      </form>
+    </div>
+  </div>
+</div>

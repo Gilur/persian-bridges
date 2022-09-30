@@ -1,0 +1,15 @@
+{{ $bg := index (.Resources.Match (printf "%s" .Params.image)) 0 }}
+
+{{ $position := .Params.hero.coverPosition | default "Bottom" }}
+{{ $lgSize := .Params.hero.lgSize | default "600x400" }}
+{{ $bgsm := $bg.Fill (printf "%s %s" $lgSize $position)}}
+{{ $bglg := $bg.Resize "x300"}}
+<section role="banner" class="bg-var-sm md:bg-var bg-secondary bg-no-repeat bg-cover bg-center"
+  style="--bg-sm: url({{$bgsm.Permalink | safeCSS}});--bg: url({{$bglg.Permalink | safeCSS}});">
+  <div class="h-80 md:h-96 flex items-center justify-center">
+    <h1 class="text-center text-white text-shadow-md font-bold text-4xl lg:text-6xl">
+      {{- .Params.hero.title | default .Title -}}
+    </h1>
+  </div>
+</section>
+<i class="fas fa-user text-gray-900"></i>

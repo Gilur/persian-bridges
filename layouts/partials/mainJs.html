@@ -1,0 +1,15 @@
+{{- $main := resources.Get "js/main.js" }}
+{{- $bunldeJS := slice $main }}
+
+{{- $bunldeJS = $bunldeJS | resources.Concat "js/bundle.js" | fingerprint | js.Build}}
+
+{{- $babelConfig :="assets/js/babel.config.js" }}
+{{ if .Site.IsServer}}
+{{- $bunldeJS = $bunldeJS | babel (dict "verbose" true "config" $babelConfig) -}}
+{{ else -}}
+{{- $bunldeJS = $bunldeJS | babel (dict "noComments" true "minified" true "config" $babelConfig) -}}
+<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/24992650.js"></script>
+
+{{ end -}}
+
+<script src="{{$bunldeJS.Permalink}}"></script>
