@@ -4,7 +4,12 @@
   font-weight: 400;
   src: url('/fonts/Courgette-Regular.ttf');
 }
-
+@font-face {
+  font-family: 'GreatVibes';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/GreatVibes-Regular.ttf');
+}
 .open {
   --iny: 110%;
   --outy: 100%;

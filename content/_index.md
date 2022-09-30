@@ -28,4 +28,7 @@ lang:
   - name: Drents
     url: '/drt'
 
+hero:
+  title: Persian Bridges
+  subtitle: Uw betrouwbare partner voor al uw betrekkingen met Iran
 ---

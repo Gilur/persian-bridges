@@ -1,4 +1,14 @@
 {{ define "main" }}
-{{ $res := .Resources }}
+{{ $res := resources }}
+{{ $bgCover := $res.GetMatch "images/large.jpg" }}
+{{ $brushEffect := $res.GetMatch "images/brush-effect.png" }}
 
+{{ with .Params.hero }}
+<div class="bg-var bg-no-repeat bg-cover bg-center flex items-center justify-center" style="--bg: url({{ $bgCover.Permalink }});height: 60vh">
+<div class="container bg-var bg-no-repeat bg-cover bg-center text-center py-12 opacity-0 scroll duration-1000" style="--bg: url({{ $brushEffect.Permalink }})"             data-scroll-classes='opacity-0'>
+<h1 class="text-5xl md:text-6xl lg:text-9xl font-GreatVibes">{{ .title }}</h1>
+<p class="text-primary text-3xl font-courgette">{{ .subtitle }}</p>
+</div>
+</div>
+{{ end }}
 {{ end }}

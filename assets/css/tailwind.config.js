@@ -11,12 +11,12 @@ module.exports = {
           DEFAULT: "2rem",
         },
       },
-      fontFamily: { courgette: ['Courgette', 'serif'] },
+      fontFamily: {
+         courgette: ['Courgette', 'serif'],
+      GreatVibes: ['GreatVibes', 'serif'] },
       backgroundImage: {
         "var-sm": "var(--bg-sm)",
         var: "var(--bg)",
-        "main-rg":
-          "radial-gradient(circle, rgba(28,41,62,1) 50%, rgba(26,37,56,1) 70%, rgba(17,24,36,1) 100%);",
       },
     },
   },
