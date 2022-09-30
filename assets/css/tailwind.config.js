@@ -3,6 +3,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#ff0000",
+        secondary: "#f7f2ee"
       },
       width: { "1-3": "calc(33.33% - 1rem)", "1-2": "calc(50% - .5rem)" },
       container: {
@@ -12,8 +13,9 @@ module.exports = {
         },
       },
       fontFamily: {
-         courgette: ['Courgette', 'serif'],
-      GreatVibes: ['GreatVibes', 'serif'] },
+        courgette: ['Courgette', 'serif'],
+        GreatVibes: ['GreatVibes', 'serif']
+      },
       backgroundImage: {
         "var-sm": "var(--bg-sm)",
         var: "var(--bg)",
