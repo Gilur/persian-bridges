@@ -11,4 +11,23 @@
 </div>
 </div>
 {{ end }}
+
+{{ with .Params.sec2 }}
+  <div class="container py-12 lg:flex items-center space-y-8 lg:space-y-0">
+    <div class="space-y-8 lg:p-8">
+      <img src="{{ (resources.GetMatch `/images/PersionBridges-1.png`).Permalink }}" alt="logo" class="w-36">
+      <h2 class="font-GreatVibes text-4xl text-primary">{{ .h1 }}</h2>
+      <h3 class="text-primary font-courgette text-lg">{{ .h2 }}</h3>
+      {{ range .text }}
+        <p>{{ . }}</p>
+      {{ end }}
+    </div>
+    <div class="space-y-8 lg:p-8">
+      <img src="{{ (resources.GetMatch `/images/lJrzBeJ-1024x678.jpg`).Permalink }}" alt="logo" >
+
+      <iframe width="100%" src="https://www.youtube.com/embed/BSm42LSEcVc" frameborder="0" onload="this.height=this.offsetWidth/1.777"></iframe>
+    </div>
+  </div>
+{{ end }}
+
 {{ end }}
