@@ -1,4 +1,4 @@
-baseURL: https://persian-bridges.com/
+baseURL: https://luxury-cupcake-39fa75.netlify.app/ #https://persian-bridges.com/
 params:
   author: M. Inam
   whatsapp: https://api.whatsapp.com/send?phone=31638304249&text=persian-Bridges&source=&data=
