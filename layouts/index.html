@@ -49,4 +49,24 @@
   </div>
 </div>
 {{ end }}
+
+<div class="container py-4">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {{ range $res.Match `/images/home-slider1/*` }}
+      <div class="swiper-slide h-40 lg:h-96 bg-var bg-center bg-no-repeat bg-cover" style="--bg: url({{ .Permalink }})">
+      </div>
+      {{ end }}
+    </div>
+
+    <div class="absolute top-1/2 px-4 flex justify-between w-full z-10">
+      <div class="swiper-button-prev border-l-4 border-b-4 w-6 h-6 border-primary transform rotate-45">
+      </div>
+      <div class="swiper-button-next border-r-4 border-b-4 w-6 h-6 border-primary transform -rotate-45">
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
 {{ end }}
