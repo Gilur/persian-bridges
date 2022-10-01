@@ -145,5 +145,17 @@ sec4:
       - link:
           url: https://persian-bridges.com/#
           text: Binnenkort beschikbaar (Partnerschap met ...... ) 
+sec5:
+  h1: Onze tour 
+
+sec6:
+  h1: Google Customer reviews
+
+sec7:
+  h1: Facebook feed
+
+
+sec8:
+  h1: Instagram feed
 
 ---

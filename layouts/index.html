@@ -16,7 +16,7 @@
 
 {{ with .Params.sec2 }}
 <div class="container py-12 lg:flex items-center space-y-8 lg:space-y-0">
-  <div class="space-y-8 lg:p-8">
+  <div class="space-y-8 lg:p-8 opacity-0 scroll duration-1000" data-scroll-classes='opacity-0'>
     <img src="{{ (resources.GetMatch `/images/PersionBridges-1.png`).Permalink }}" alt="logo" class="w-36">
     <h2 class="font-GreatVibes text-4xl text-primary">{{ .h1 }}</h2>
     <h3 class="text-primary font-courgette text-lg">{{ .h2 }}</h3>
@@ -25,10 +25,12 @@
     {{ end }}
   </div>
   <div class="space-y-8 lg:p-8">
-    <img src="{{ (resources.GetMatch `/images/lJrzBeJ-1024x678.jpg`).Permalink }}" alt="logo">
+    <img src="{{ (resources.GetMatch `/images/lJrzBeJ-1024x678.jpg`).Permalink }}" alt="logo"
+      class=" opacity-0 scroll duration-1000" data-scroll-classes='opacity-0'>
 
     <iframe width="100%" src="https://www.youtube.com/embed/BSm42LSEcVc" frameborder="0"
-      onload="this.height=this.offsetWidth/1.777"></iframe>
+      onload="this.height=this.offsetWidth/1.777" loading="lazy" class=" opacity-0 scroll duration-1000"
+      data-scroll-classes='opacity-0'></iframe>
   </div>
 </div>
 {{ end }}
@@ -36,10 +38,11 @@
 {{ with .Params.sec3 }}
 <div class="bg-secondary">
   <div class="container py-12 lg:py-20 space-y-12">
-    <h2 class="font-GreatVibes text-center text-4xl text-primary">{{ .h1 }}</h2>
+    <h2 class="font-GreatVibes text-center text-4xl text-primary opacity-0 scroll duration-1000"
+      data-scroll-classes='opacity-0'>{{ .h1 }}</h2>
     <div class="lg:flex space-y-8 lg:space-y-0">
       {{ range .reviews }}
-      <div class="space-y-4 w-full lg:p-4">
+      <div class="space-y-4 w-full lg:p-4 opacity-0 scroll duration-1000" data-scroll-classes='opacity-0'>
         <span class="text-3xl text-yellow-600">★★★★★</span>
         <h3 class="text-3xl text-primary font-courgette">{{ .h }}</h3>
         <p>{{ safeHTML .p }}</p>
@@ -51,7 +54,7 @@
 {{ end }}
 
 {{ with $res.Match `/images/home-slider1/*` }}
-<div class="container py-4">
+<div class="container py-4 opacity-0 scroll duration-1000" data-scroll-classes='opacity-0'>
   <div class="swiper">
     <div class="swiper-wrapper">
       {{ range . }}
@@ -74,7 +77,7 @@
 {{ with .Params.sec4 }}
 <div class="bg-primary text-white">
   <div class="container py-8 lg:py-20 md:flex">
-    <div class="space-y-8 w-full">
+    <div class="space-y-8 w-full opacity-0 scroll duration-1000" data-scroll-classes='opacity-0'>
       {{ with .sec1 }}
       <h2 class="font-GreatVibes text-4xl">{{ .h1 }}</h2>
       <div>{{ safeHTML .p }}</div>
@@ -100,7 +103,7 @@
       {{ end }}
       {{ end }}
     </div>
-    <div class="space-y-8 w-full">
+    <div class="space-y-8 w-full opacity-0 scroll duration-1000" data-scroll-classes='opacity-0'>
       {{ with .sec2 }}
       <h2 class="font-GreatVibes text-4xl">{{ .h1 }}</h2>
       {{ range .features }}
@@ -124,6 +127,29 @@
     </div>
   </div>
 </div>
+{{ end }}
 
+{{ with .Params.sec5 }}
+<div class="container py-12 lg:py-20 space-y-12 opacity-0 scroll duration-1000" data-scroll-classes='opacity-0'>
+  <h2 class="font-GreatVibes text-center text-4xl text-primary">{{ .h1 }}</h2>
+</div>
+{{ end }}
+
+{{ with .Params.sec6 }}
+<div class="container py-12 lg:py-20 space-y-12 opacity-0 scroll duration-1000" data-scroll-classes='opacity-0'>
+  <h2 class="font-GreatVibes text-center text-4xl text-primary">{{ .h1 }}</h2>
+</div>
+{{ end }}
+
+{{ with .Params.sec7 }}
+<div class="container py-12 lg:py-20 space-y-12 opacity-0 scroll duration-1000" data-scroll-classes='opacity-0'>
+  <h2 class="font-GreatVibes text-center text-4xl text-primary">{{ .h1 }}</h2>
+</div>
+{{ end }}
+
+{{ with .Params.sec8 }}
+<div class="container py-12 lg:py-20 space-y-12 opacity-0 scroll duration-1000" data-scroll-classes='opacity-0'>
+  <h2 class="font-GreatVibes text-center text-4xl text-primary">{{ .h1 }}</h2>
+</div>
 {{ end }}
 {{ end }}
