@@ -4,7 +4,8 @@
 @import "node_modules/tailwindcss/components";
 
 /* Swiper lirary for slider */
-@import "swiper/swiper-bundle.css";
+@import "swiper/swiper.min.css";
+
 @import "assets/css/site";
 
 /* Tailwind's utility classes - generated based on config file */

@@ -10,9 +10,12 @@ ScrollAnimation()
 // swiper
 const swiperOption = {
   loop: true,
-  effect: "flip", // 'fade' | 'cube' | 'coverflow' | 'flip'
+  effect: "flip",
   autoplay: {
     delay: 5000,
+  },
+  pagination: {
+    el: '.swiper-pagination',
   },
   navigation: {
     nextEl: ".swiper-button-next",
@@ -20,4 +23,4 @@ const swiperOption = {
   },
 };
 SwiperCore.use([Navigation]);
-const swiper = new Swiper(".swiper-container", swiperOption);
+const swiper = new Swiper(".swiper", swiperOption);
