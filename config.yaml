@@ -5,12 +5,23 @@ params:
   insta: https://www.instagram.com/persian_bridges/  
   fb: https://www.facebook.com/persianbridges/ 
   email: info@persian-bridges.com
-  address:
-  tel: 
+  lang:
+    - name: عربى
+      url: '/ar'
+    - name: ایرانی
+      url: '/fa'
+    - name: English
+      url: '/en'
+    - name: Française
+      url: '/fr'
+    - name: Deutsche
+      url: '/'
+    - name: Drents
+      url: '/drt'
 
 title: Persian Bridges
 copyright: Copyright Persian Bridges KVK 71723684 Telefoonnummer 0031-638304249  0098-9120085257
- 
+
 # build and other other setup
 build:
   writeStats: true

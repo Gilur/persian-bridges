@@ -14,19 +14,6 @@ menu:
     name: Reizen
   - url: /contact
     name: Contact
-lang:
-  - name: عربى
-    url: '/ar'
-  - name: ایرانی
-    url: '/fa'
-  - name: English
-    url: '/en'
-  - name: Française
-    url: '/fr'
-  - name: Deutsche
-    url: '/'
-  - name: Drents
-    url: '/drt'
 
 hero:
   title: Persian Bridges
